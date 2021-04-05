@@ -1,0 +1,182 @@
+body {
+  font-size: 16px;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg_image {
+  position: absolute;
+  filter: blur(10px);
+  width: 100%;
+  height: 100vh;
+}
+
+.main_container {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.main_info {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.logo {
+  color: black;
+  margin: 40px 0 0 70px;
+  font-weight: 800;
+}
+
+.main_info_block_text {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 80px 70px;
+}
+
+.temp {
+  font-size: 6em;
+  height: 85%;
+}
+
+.city_time_block,
+.type_block {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+
+.city {
+  font-size: 3em;
+}
+
+.time {
+  font-size: 0.8em;
+}
+
+.type_icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.type_text {
+  font-size: 0.8em;
+}
+
+.other_info {
+  width: 30%;
+  height: 100%;
+  background-color: #2b6684;
+  font-size: 0.7em;
+  color: #c7cedf;
+}
+
+.other_info_wrapper {
+  position: relative;
+  margin-left: 40px;
+}
+
+.search_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.search_block input {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: rgba(176, 219, 241, 0.6);
+  border-bottom-width: 1px;
+  padding-bottom: 5px;
+}
+
+.search_block input::placeholder {
+  color: #c7cedf;
+  font-size: 0.9em;
+}
+
+.search_block button {
+  width: 60px;
+  height: 60px;
+  background-color: ghostwhite;
+  border: transparent;
+}
+
+.other_info ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.other_info ul::after,
+.other_info_wrapper::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  opacity: 0.6;
+  background-color: #b0dbf1;
+  position: absolute;
+}
+
+.other_info ul li {
+  margin-top: 25px;
+}
+
+.other_info ul li:last-child {
+  margin-bottom: 25px;
+}
+
+/* .other_info hr {
+  width: 90%;
+  margin: 0;
+  opacity: 0.6;
+  color: #b0dbf1;
+} */
+
+.other_info h3 {
+  margin: 50px 0 30px 0;
+  color: white;
+}
+
+.cloudy_info,
+.humidity_info,
+.wind_info,
+.rain_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cloudy_info h4,
+.humidity_info h4,
+.wind_info h4,
+.rain_info h4 {
+  margin: 0;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.cloudy_info p,
+.humidity_info p,
+.wind_info p,
+.rain_info p {
+  margin-right: 30px;
+  color: white;
+}
