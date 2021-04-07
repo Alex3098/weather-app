@@ -38,7 +38,6 @@ body {
 }
 
 .logo {
-  color: black;
   margin: 40px 0 0 70px;
   font-weight: 800;
 }
@@ -59,6 +58,9 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 25px;
+}
+.type_block {
+  align-items: center;
 }
 
 .city {
@@ -97,6 +99,10 @@ body {
   align-items: flex-end;
 }
 
+.search_block form {
+  display: contents;
+}
+
 .search_block input {
   background-color: transparent;
   border-top: none;
@@ -105,6 +111,8 @@ body {
   border-bottom-color: rgba(176, 219, 241, 0.6);
   border-bottom-width: 1px;
   padding-bottom: 5px;
+  outline: none;
+  color: white;
 }
 
 .search_block input::placeholder {
@@ -119,36 +127,16 @@ body {
   border: transparent;
 }
 
-.other_info ul {
-  list-style: none;
-  padding: 0;
-  position: relative;
+.search_block button img {
+  width: 20px;
 }
 
-.other_info ul::after,
-.other_info_wrapper::after {
-  content: "";
-  width: 90%;
-  height: 1px;
-  opacity: 0.6;
-  background-color: #b0dbf1;
-  position: absolute;
+.error_city {
+  color: white;
+  margin-top: 10px;
+  padding: 5px;
+  width: fit-content;
 }
-
-.other_info ul li {
-  margin-top: 25px;
-}
-
-.other_info ul li:last-child {
-  margin-bottom: 25px;
-}
-
-/* .other_info hr {
-  width: 90%;
-  margin: 0;
-  opacity: 0.6;
-  color: #b0dbf1;
-} */
 
 .other_info h3 {
   margin: 50px 0 30px 0;
@@ -179,4 +167,76 @@ body {
 .rain_info p {
   margin-right: 30px;
   color: white;
+}
+
+@media (max-width: 1024px) {
+  .main_container {
+    width: 80%;
+    flex-direction: column;
+  }
+  .main_info {
+    width: 100%;
+  }
+  .other_info {
+    width: 100%;
+  }
+  .search_block {
+    justify-content: center;
+  }
+  .other_info h3 {
+    margin: 15px auto;
+    width: fit-content;
+  }
+  .cloudy_info,
+  .humidity_info,
+  .wind_info,
+  .rain_info {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_info_block_text {
+    margin: 0 0 35px 70px;
+  }
+  .other_info_wrapper {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 428px) {
+  body {
+    font-size: 10px;
+  }
+  .logo {
+    margin: 40px 0 0 25px;
+  }
+  .main_info_block_text {
+    margin: 40px 0 25px 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .city_time_block {
+    margin-left: 10px;
+  }
+  .type_block {
+    margin-left: 10px;
+  }
+  .search_block button {
+    width: 40px;
+    height: 40px;
+  }
+  .search_block button img {
+    width: 15px;
+  }
+  .search_block input::placeholder {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 8px;
+  }
 }
