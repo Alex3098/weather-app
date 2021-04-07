@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const api_call = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric`
       );
       const data = await api_call.json();
 
@@ -35,7 +35,7 @@ function App() {
     try {
       const city = e.target.elements.city.value;
       const api_call = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
       );
       const data = await api_call.json();
 
